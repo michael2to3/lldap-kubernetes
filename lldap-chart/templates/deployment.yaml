@@ -8,7 +8,7 @@ metadata:
     {{- include "lldap-chart.labels" . | nindent 4 }}
   annotations:
     lldap: https://github.com/nitnelave/lldap
-    k8s: https://github.com/Evantage-WS/lldap-kubernetes
+    k8s: https://github.com/michael2to3/lldap-kubernetes
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -23,7 +23,7 @@ spec:
         {{- include "lldap-chart.selectorLabels" . | nindent 8 }}
       annotations:
         lldap: https://github.com/nitnelave/lldap
-        k8s: https://github.com/Evantage-WS/lldap-kubernetes
+        k8s: https://github.com/michael2to3/lldap-kubernetes
     spec:
       containers:
         - name: lldap
