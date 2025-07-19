@@ -40,11 +40,6 @@ spec:
           {{ toYaml .Values.env | nindent 12 }}
           {{- end }}
 
-          {{- if .Values.extraEnv }}
-          extraEnv:
-          {{ toYaml .Values.extraEnv | nindent 12 }}
-          {{- end }}
-
           {{- if .Values.envFrom }}
           envFrom:
           {{ toYaml .Values.envFrom | nindent 12 }}
