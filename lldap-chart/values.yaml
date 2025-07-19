@@ -31,11 +31,8 @@ extraVolumeMounts: []
 ##### deployment
 # hour zone
 env:
-  TZ: "CET"
-  GID: "1001"
-  UID: "1001"
-
-extraEnv: []
+  - name: LLDAP_DATABASE_URL
+    valueFrom: { secretKeyRef: { name: lldap, key: db_url } }
 
 resources: {}
 #  limits:
